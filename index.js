@@ -4,6 +4,12 @@ const transporter = require("./config");
 const dotenv = require("dotenv");
 dotenv.config();
 const app = express();
+const cors = require('cors');
+const corsOptions ={
+    credentials:true,            //access-control-allow-credentials:true
+    optionSuccessStatus:200
+}
+app.use(cors(corsOptions));
 
 const buildPath = path.join(__dirname, "..", "build");
 app.use(express.json());
