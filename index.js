@@ -47,7 +47,7 @@ app.post("/send", (req, res) => {
     });
   }
 });
-app.get("*", function (req, res) {
+/*app.get("*", function (req, res) {
   res.sendFile(
     path.join(__dirname, "..", "build", "index.html"),
     function (err) {
@@ -56,7 +56,7 @@ app.get("*", function (req, res) {
       }
     }
   );
-});
+});*/
 
 app.listen(3000, () => {
   console.log("server start on port 3000");
